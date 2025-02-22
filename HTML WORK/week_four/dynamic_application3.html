@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Application</title>
+    <link rel="stylesheet" href="./styles/general_style.css">
+</head>
+<body onload="greet()">
+    <button onclick="alert('Hello Tendo')">Click Me</button>
+    <p id="text">This is the first HTML, CSS and Javascript </p>
+    <button onclick="document.getElementById('text').innerHTML='I am testing inline Javascript.'">Change Text</button>
+    <button id="click">Internal Javascript Click.</button>
+    
+    <!-- New Color Picker and Button for Changing Background Color -->
+    <input type="color" id="colorPicker">
+    <button onclick="changeBackgroundColorFromInput()">Change Background Color</button>
+
+    <!-- Existing Buttons for Changing Background Color -->
+    <button onclick="changeBackgroundColor('lightblue')">Light Blue</button>
+    <button onclick="changeBackgroundColor('lightgreen')">Light Green</button>
+    <button onclick="changeBackgroundColor('lightpink')">Light Pink</button>
+    <button onclick="resetBackgroundColor()">Reset</button>
+    
+    <script>
+        // Uncomment this function if you want the greeting alert on page load
+        // function greet(){
+        //     alert("Welcome to the Dynamic World!");
+        // }
+        
+        const buttonId = document.getElementById('click');
+        buttonId.onclick = function(){
+            alert("Button was clicked!")
+        }
+
+        buttonId.onmouseover = function(){
+            buttonId.style.color ='yellow';
+        }
+
+        buttonId.onmouseout = function(){
+            buttonId.style.color ='red';
+        }
+
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function changeBackgroundColorFromInput() {
+            const color = document.getElementById('colorPicker').value || '#ffffff'; // Default to white if input is empty
+            if (isValidColor(color)) {
+                document.body.style.backgroundColor = color;
+            } else {
+                alert('Invalid color! Please select a valid color.');
+            }
+        }
+
+        function isValidColor(strColor) {
+            const s = new Option().style;
+            s.color = strColor;
+            return s.color !== '';
+        }
+        
+        function resetBackgroundColor() {
+            document.body.style.backgroundColor = 'white';
+        }
+    </script>
+</body>
+</html>
+
+// add error handling to check for invalid colors. Provide a default color if the input is empty. Use a color picker instead of a text input.//
