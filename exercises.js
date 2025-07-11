@@ -86,4 +86,14 @@ console.log(city_populations.London_population);
 console.log(city_populations.city);
 
 
+// Destructure an object with keys firstName and lastName into variables.
+let CloudEngineer = {
+    firstName : "Tendo",
+    lastName : "Calvin"
+}
+
+// destructuring
+let {firstName, lastName} = CloudEngineer;
+console.log(firstName);
+console.log(lastName);
 
