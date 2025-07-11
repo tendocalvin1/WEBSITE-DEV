@@ -97,3 +97,16 @@ let {firstName, lastName} = CloudEngineer;
 console.log(firstName);
 console.log(lastName);
 
+
+// Merge two arrays using the spread operator.
+clubs = ['city','united','arsenal','liverpool','chelsea'];
+london_clubs = ['palace','fulham','QPR','Brentford'];
+
+let all_clubs = [...clubs, ...london_clubs];
+console.log("The premier league clubs are:", all_clubs);
+
+// ...clubs takes all the elements from the clubs array.
+
+// ...london_clubs takes all elements from london_clubs.
+
+// [...clubs, ...london_clubs] creates a new array that merges both.
