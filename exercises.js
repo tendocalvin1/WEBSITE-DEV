@@ -110,3 +110,26 @@ console.log("The premier league clubs are:", all_clubs);
 // ...london_clubs takes all elements from london_clubs.
 
 // [...clubs, ...london_clubs] creates a new array that merges both.
+
+
+// Use find() to locate a product with a certain price in an array of objects
+
+let ShoppingList = [
+    { Product: "Bag", Price: 200 },
+    { Product: "Watch", Price: 1200 },
+    { Product: "United Jersey", Price: 100 }
+];
+
+// Use find() to locate product with price === 100
+let priceMatch = ShoppingList.find(item => item.Price === 100);
+
+console.log("Commodity that matches the price of 100:", priceMatch);
+
+
+
+// let users = [{id : 1}, {id : 2}];
+// let user = users.find(u => u.id === 2); 
+// console.log("Found user:", user); // {id: 2}
+
+
+
