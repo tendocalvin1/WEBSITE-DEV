@@ -64,5 +64,75 @@ if(age >= 16 && hasID){
     console.log("Still too young for such conversations.")
 }
 
+let isLoggedIn = true;
+let isVerified = false;
+
+if ( isLoggedIn || isVerified){
+    console.log("Welcome to our platform");
+}else{
+    console.log("Please sign up to join our platform");
+}
+
+let myname = "Tendo Calvin";
+let age1 = 23;
+let isStudent = true;
+
+console.log(`Hello, my name is ${myname}. I am ${age1} years old.`)
+console.log(`Are you a student ? ${isStudent}`);
+
+// user info collector
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.question("What is your full name? ", function (fullName) {
+    rl.question("How old are you? ", function (age) {
+      rl.question("Which country do you live in? ", function (country) {
+        rl.question("What is your favorite hobby? ", function (hobby) {
+          rl.question("What do you do (student, engineer, etc)? ", function (profession) {
+            age = Number(age);
+            console.log("\n🔹🔹🔹 PERSONAL PROFILE 🔹🔹🔹");
+            console.log(`👤 Name: ${fullName}`);
+            console.log(`🎂 Age: ${age}`);
+            console.log(`🌍 Country: ${country}`);
+            console.log(`💼 Profession: ${profession}`);
+            console.log(`🎯 Hobby: ${hobby}`);
+  
+            if (age < 13) {
+              console.log("📌 You are categorized as a *child*.");
+            } else if (age < 20) {
+              console.log("📌 You are categorized as a *teenager*.");
+            } else if (age < 60) {
+              console.log("📌 You are categorized as an *adult*.");
+            } else {
+              console.log("📌 You are categorized as a *senior citizen*.");
+            }
+  
+            rl.close();
+          });
+        });
+      });
+    });
+  });
+
+
+
+//let userName = prompt("what is your name?");
+//let userAge = prompt("What's your age?");
+
+// age = Number(age);
+//console.log(`Hello ${userName}, you're ${userAge} years old.`)
+
+//if(Age < 12){
+//    console.log("You're an infant");
+//}else if(Age >= 13 && Age <= 19){
+//    console.log("You're a teenager!");
+//}else{
+//    console.log("You're a grown up person, get your shit together!");
+//}
+
 
 
