@@ -18,9 +18,4 @@ console.log(students);
 let parsed = JSON.parse(jsonString);  // Converts back to object
 console.log(jsonString);
 
-// Create an object with nested values and write a function that reads a nested key.
-function(marks){
-    function(results){
-        
-    }
-}
+
