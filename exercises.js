@@ -209,3 +209,29 @@ console.log(products[0].price);
 // 📌 Each object has its own keys like name and price.
 
 
+// Example 4: Nested Object Inside Array Inside Object
+let company = {
+    employees : [
+        {name : "Aaron", role: "Data Scientist"},
+        {name : "Tendo", role: "Software Engineer"}
+    ]
+}
+console.log(company.employees[0].role);
+
+//  Example 5: Deeply Nested Object
+let school = {
+    name : "UCU",
+    location : {
+        city : "Wakiso",
+        building : {
+            main : "N block",
+            other_blocks : "K block",
+        }
+    }
+};
+
+console.log(school.location.city);
+
+
+
+
