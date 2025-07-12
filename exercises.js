@@ -170,4 +170,42 @@ let student = {
 console.log(getNestedMark(student, "Maths"));
 
 
+// nested objects.
+let user = {
+    name : "Calvin",
+    address : {
+        city : "Kasese",
+        zip : 256
+    }
+};
+console.log(user.address.city);
+// 📌 address is an object inside the user object.
+// 📌 city is a nested key.
+
+
+// Example 2: Object with Nested Array
+
+let DataScientist = {
+    name : "Tendo Calvin",
+    subjects : ['ML', 'Data Analysis', 'NLP'],
+}
+
+console.log(DataScientist.subjects[0]);
+
+// 📌 subjects is an array inside the student object.
+// 📌 Access using the index.
+
+
+//  Example 3: Array of Objects
+let products = [
+    {name : "laptop", price: 2400},
+    {name : "Phone", price: 1000}
+]
+
+console.log(products[1].price);
+console.log(products[0].price);
+
+// 📌 products is an array containing objects.
+// 📌 Each object has its own keys like name and price.
+
 
