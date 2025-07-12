@@ -132,4 +132,42 @@ console.log("Commodity that matches the price of 100:", priceMatch);
 // console.log("Found user:", user); // {id: 2}
 
 
+// nested values and nested keys
+// A nested value means a value inside another object or inside another array or object within an object.
+// A nested key is the key (property name) that is inside a nested object.
+
+
+//  Example of an Object with Nested Values:
+
+let SoftwareEngineer = {
+    name : "Tendo Calvin",
+    age : 23,
+    marks : {
+        Maths : 87,
+        English : 77,
+        Science : 77
+    }
+};
+console.log(SoftwareEngineer.marks.Maths);
+
+// marks is a key whose value is another object.
+// math, english, science are nested keys inside the marks object.
+
+// Writing a function to read a nested key:
+function getNestedMark(studentObj, subject){
+    return studentObj.marks[subject];
+}
+
+let student = {
+    name : "Tendo",
+    age : 23,
+    marks : {
+        Maths : 78,
+        English : 90,
+        Science : 95
+    }
+};
+console.log(getNestedMark(student, "Maths"));
+
+
 
