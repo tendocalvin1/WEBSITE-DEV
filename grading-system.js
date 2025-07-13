@@ -1,56 +1,50 @@
-// updated version of the grading system
-
 let Students = [
     {
-        name : "Tendo Calvin",
-        marks :{
-            calculus: 75,
-            linear_Algebra : 89,
-            probability : 77
-        }
+      name: "Tendo Calvin",
+      marks: {
+        Calculus: 78,
+        Linear_Algebra: 80,
+        Probability: 75
+      }
     },
-
     {
-        name : "David Beckham",
-        marks :{
-            calculus: 85,
-            linear_Algebra : 80,
-            probability : 76
-        }
+      name: "Trent Arnold",
+      marks: {
+        Calculus: 68,
+        Linear_Algebra: 80,
+        Probability: 75
+      }
     },
-
     {
-        name : "Trent Arnold",
-        marks :{
-            calculus: 33,
-            linear_Algebra : 65,
-            probability : 81
-        }  
+      name: "Carlos Tevez",
+      marks: {
+        Calculus: 68,
+        Linear_Algebra: 81,
+        Probability: 55
+      }
     }
-]
-
-for(let student of Students){
-    let marks = Students.marks; 
+  ];
+  
+  // Loop through each student
+  for (let student of Students) {
     let total = 0;
-    let numSubjects  = 0 ;
-
-
-
-for (let subject in marks){
-    total += marks[subject];
-    numSubjects++;
-
-}
-
-
-
-let average = total / numSubjects;
-let status = average => 60 ? "PASS" : "FAIL";
-
-console.log(`\n${student.name}`);
-console.log(`Marks: ${JSON.stringify(marks)}`);
-console.log(`Average: ${average.toFixed(2)}`);
-console.log(`Status: ${status}`);
-
-
-}
+    let subjects = Object.values(student.marks);
+    
+    // Calculate total
+    for (let mark of subjects) {
+      total += mark;
+    }
+  
+    // Calculate average
+    let average = total / subjects.length;
+  
+    // Determine pass/fail
+    let status = average >= 60 ? "PASS" : "FAIL";
+  
+    // Print results
+    console.log(`\nStudent: ${student.name}`);
+    console.log(`Marks: ${JSON.stringify(student.marks)}`);
+    console.log(`Average: ${average.toFixed(2)}`);
+    console.log(`Status: ${status}`);
+  }
+  
