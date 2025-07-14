@@ -23,3 +23,15 @@ console.log(typeof num); // outputs number
 let age = Number("An arbitrary string instead of a number");
 console.log(age);
 
+// Boolean conversions
+// The conversion rule:
+
+// Values that are intuitively “empty”, like 0, an empty string, null, undefined, and NaN, become false.
+// Other values become true.
+
+console.log( Boolean(1) ); // true
+console.log( Boolean(0) ); // false
+
+console.log( Boolean("hello") ); // true
+console.log( Boolean("") ); // false
+
