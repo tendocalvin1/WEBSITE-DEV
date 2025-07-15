@@ -7,16 +7,23 @@
 </head>
 <body>
     <script>
-        digit = parseFloat();
-        letter = String();
-        character = prompt("Enter the character type:");
-        if(character === letter){
+        let character = prompt("Enter a single character:");
+
+        if (character.length !== 1) {
+            console.log("Please enter only one character.");
+        } else if ((character >= 'a' && character <= 'z') || (character >= 'A' && character <= 'Z')) {
             console.log("This is a letter");
-        }else if(character === digit){
+        } else if (character >= '0' && character <= '9') {
             console.log("This is a digit");
-        }else{
+        } else {
             console.log("This is a special character");
         }
     </script>
 </body>
 </html>
+
+<!-- We check '.length !== 1' to ensure only one character is entered.
+
+Character comparisons like 'a' <= character <= 'z' work because characters have Unicode/ASCII values.
+
+All other characters (like @, #, *, !, etc.) are treated as special characters.-->
