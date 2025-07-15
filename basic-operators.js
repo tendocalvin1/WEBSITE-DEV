@@ -139,4 +139,3 @@ console.log(2 * ++result); // output is 4
 
 let Messiah = 1;
 console.log(2 * Messiah++);  // output is 2, because Messiah++ returns the "old" value
-
