@@ -7,15 +7,16 @@
 </head>
 <body>
     <script>
-        number_one = prompt("Enter the first number:");
-        number_two = prompt("Enter the second number:");
-        if(number_one > number_two){
-            console.log("Number one is greater than number two");
-        }else if(number_two > number_one){
-            console.log("Number two is greater than number one");
-        }else{
-            console.log("Both numbers are equal");
-        }
+        let number_one = Number(prompt("Enter the first number:"));
+        let number_two = Number(prompt("Enter the second number:"));
+
+if (number_one > number_two) {
+    console.log("Number one is greater than number two");
+} else if (number_two > number_one) {
+    console.log("Number two is greater than number one");
+} else {
+    console.log("Both numbers are equal");
+}
     </script>
 </body>
 </html>
