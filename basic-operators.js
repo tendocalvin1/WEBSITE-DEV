@@ -121,4 +121,22 @@ let David = 1;
 let M = David ++; //  changed ++David to David++
 console.log(M); // outputs 1, this is the postfix form
 
+// To summarize:
+
+// If the result of increment/decrement is not used, there is no difference in which form to use:
+let Tendo = 0;
+Tendo ++; // this is an increment
+++Tendo; // prefix adds a one to the variable
+console.log(Tendo); // output is 2
+
+// NB Increment/decrement among other operators
+
+// The operators ++/-- can be used inside expressions as well. 
+// Their precedence is higher than most other arithmetical operations.
+
+let result = 1;
+console.log(2 * ++result); // output is 4
+
+let Messiah = 1;
+console.log(2 * Messiah++);  // output is 2, because Messiah++ returns the "old" value
 
