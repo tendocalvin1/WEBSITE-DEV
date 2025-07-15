@@ -21,3 +21,16 @@ if(marks > 90 && marks <= 100){
 }else{
     console.log("The student has scored an F");
 }
+
+// temperature feedback
+let temperature = 31;
+
+if(temperature > 30){
+    console.log("It is hot");
+}else if(temperature > 20 && temperature < 30){
+    console.log("Nice weather");
+}else if(temperature < 20){
+    console.log("It is cold");
+}else{
+    console.log("it is freezing");
+}
