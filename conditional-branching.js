@@ -24,7 +24,7 @@ if (job == 'Software Engineer'){
 }
 
 let AccessAllowed;
-let age = 45;
+let age = 16;
 
 if(age > 18){
     AccessAllowed = true;
@@ -33,3 +33,27 @@ if(age > 18){
 }
 
 console.log(AccessAllowed);
+
+
+let a = 1
+let b = 2
+let result;
+
+if(a + b < 4){
+    console.log("Below");
+}else{
+    console.log("Over");
+}
+
+let message;
+let login ='';
+
+if(login == "Employee"){
+    console.log("Hello");
+}else if(login == "Director"){
+    console.log("Greetings");
+}else if(login == ""){
+    console.log("No Login");
+}else{
+    console.log("No credentials");
+}
