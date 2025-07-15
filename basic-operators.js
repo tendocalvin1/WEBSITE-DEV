@@ -85,3 +85,40 @@ let f = 2;
 f += 5; // now n = 7 (same as n = n + 5)
 f *= 2; // now n = 14 (same as n = n * 2) 
 console.log(f);  // 14
+
+// increment / decrement
+// Increasing or decreasing a number by one is among the most common numerical operations.
+
+// So, there are special operators for it:
+
+//     Increment ++ increases a variable by 1:
+let counter = 4;
+counter ++;  // works the same as counter = counter + 1, but is shorter
+console.log(counter); // answer is '5'
+
+// Decrement -- decreases a variable by 1:
+let course = 4;
+course --; // works the same as counter = counter - 1, but is shorter
+console.log(course); // answer is 3
+
+// Important:
+
+// Increment/decrement can only be applied to variables. 
+// Trying to use it on a value like 5++ will give an error.
+
+// The operators ++ and -- can be placed either before or after a variable.
+
+//     When the operator goes after the variable, it is in “postfix form”: counter++.
+//     The “prefix form” is when the operator goes before the variable: ++counter.
+
+// The prefix form returns the new value while the postfix form returns the old value (prior to increment/decrement).
+
+let Gareth = 1;
+let Z = ++Gareth; // (*)
+console.log(Z); // outputs 2, This is the prefix form
+
+let David = 1;
+let M = David ++; //  changed ++David to David++
+console.log(M); // outputs 1, this is the postfix form
+
+
