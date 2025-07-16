@@ -34,3 +34,28 @@ if(temperature > 30){
 }else{
     console.log("it is freezing");
 }
+
+// time based greeting
+
+let time = 16;
+if( time >= 0 && time <= 11){
+    console.log("Good morning");
+}else if(time >= 12 && time <= 17){
+    console.log("Good afternoon");
+}else if(time >= 18 && time <=23){
+    console.log("Good evening");
+}else{
+    console.log("That time doesnot exist");
+}
+
+// traffic light simulation
+let color = green;
+if(color === 'red'){
+    console.log("Stop");
+}else if(color === 'yellow'){
+    console.log("Ready");
+}else if(color === 'green'){
+    console.log("Go");
+}else{
+    console.log("That color is not part of the traffic lights system")
+}
