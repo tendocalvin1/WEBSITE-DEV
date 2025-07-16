@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        
+        // ask for numbers first
+        number_one = Number(prompt("Enter the first number:"));
+        number_two = Number(prompt("Enter the second number:"));
+
+        if(isNaN(number_one) || isNaN(number_two)){
+            console.log("Please enter valid numbers");
+        }else{
+            let operation = prompt("Enter an operation('+','/','*','-'):");
+        
+
+
+        function subtraction(a, b){
+            return a - b
+        }
+
+        function addition(a, b){
+            return a + b
+        }
+
+        function multiplication(a, b){
+            return a * b
+        }
+
+        function division(a, b){
+            if(b === 0){
+                console.log("Cannot divide a number by zero");
+            }else{
+                return a / b;
+            }
+        }
+
+        let result;
+
+        if (operation === '+'){
+            result = addition(number_one, number_two);
+        }else if(operation === '-'){
+            result = subtraction(number_one, number_two);
+        }else if(operation === '*'){
+            result = multiplication(number_one, number_two);
+        }else if(operation === '/') {
+            result = division(number_one, number_two);
+        }else{
+            console.log("This is an invalid operator please.")
+        }
+
+        console.log("Result", result);
+    }
+
+    </script>
+</body>
+</html>
