@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Calculator</title>
+</head>
+<body>
+    <script>
+    
+    amount = (parseFloat(prompt("Enter an amount for purchase:")));
+    if(isNaN(amount) || amount < 0){
+        console.log("Please enter a valid positive amount");
+    }else{
+        let discount = 0;
+    
+    if(amount > 100){
+        discount = 0.10;
+    }else if(amount > 500){
+        discount = 0.05;
+    }
+
+    let discountAmount = amount * discount;
+    let total_amount_paid = amount - discountAmount;
+
+    console.log(`Original Amount: ${amount}`);
+    console.log(`discountAmount: ${discountAmount}`);
+    console.log(`Total After Discount: ${total_amount_paid}`);
+    }
+    </script>
+</body>
+</html>
