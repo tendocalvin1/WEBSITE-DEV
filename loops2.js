@@ -115,3 +115,30 @@ for(let box = 1; box <= 10; box ++){
     }
     console.log(`Checking box ${box}`)
 }
+
+// Labels with break and continue
+
+// Labels allow you to break out of nested loops (not just the inner one).
+// 🧠 Analogy:
+
+// You’re checking rows of lockers. 
+// If you find a bomb, you run out of the entire building, not just that locker.
+
+outerloop : for(let row =1; row <= 3; row ++){
+    for(let locker = 1; locker <= 3; locker ++){
+        console.log(`Checking locker ${row} - ${locker}`);
+        if(row === 2 && locker === 2){
+            console.log("Bomb found, exiting the building !");
+            break outerloop;  // break both loops
+        }
+    }
+}
+
+
+// | Keyword    | Purpose                         | Use Case                         |
+// | ---------- | ------------------------------- | -------------------------------- |
+// | `for`      | Loop with known iteration count | Counting steps, distributing     |
+// | `while`    | Loop with unknown repetition    | Waiting for input, draining fuel |
+// | `break`    | Exit loop early                 | Error, special condition         |
+// | `continue` | Skip current step, go to next   | Ignore invalid input             |
+// | `label`    | Control nested loop flow        | Exit multi-layer logic early     |
