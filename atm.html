@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking System - If Version</title>
+</head>
+<body>
+  <script>
+    let balance = 0;
+
+    function viewBalance() {
+      console.log(`💼 Current Balance: UGX ${balance}`);
+    }
+
+    function deposit() {
+      let amount = parseFloat(prompt("Enter amount to deposit:"));
+      if (isNaN(amount) || amount <= 0) {
+        console.log("❌ Invalid deposit amount.");
+        return;
+      }
+      balance += amount;
+      console.log(`✅ UGX ${amount} deposited. New Balance: UGX ${balance}`);
+    }
+
+    function withdraw() {
+      let amount = parseFloat(prompt("Enter amount to withdraw:"));
+      if (isNaN(amount) || amount <= 0) {
+        console.log("❌ Invalid withdrawal amount.");
+        return;
+      }
+      if (amount > balance) {
+        console.log("❌ Insufficient funds.");
+        return;
+      }
+      balance -= amount;
+      console.log(`✅ UGX ${amount} withdrawn. New Balance: UGX ${balance}`);
+    }
+
+    function exitApp() {
+      console.log("👋 Thank you for banking with Calvin Bank.");
+    }
+
+    // Banking loop using if...else
+    while (true) {
+      let choice = prompt(
+        "💰 Welcome to Calvin Bank 💳\n\nChoose an operation:\n1. View Balance\n2. Deposit\n3. Withdraw\n4. Exit"
+      );
+
+      if (choice === "1") {
+        viewBalance();
+      } else if (choice === "2") {
+        deposit();
+      } else if (choice === "3") {
+        withdraw();
+      } else if (choice === "4") {
+        exitApp();
+        break; // Stop the loop
+      } else {
+        console.log("❌ Invalid choice. Please enter 1, 2, 3, or 4.");
+      }
+    }
+  </script>
+</body>
+</html>
