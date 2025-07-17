@@ -82,3 +82,36 @@ function askNumber() {
 }
 
 askNumber();
+
+for(i = 0; i <= 5; i++){
+    console.log(`Handing out book number ${i}`);
+}
+
+
+let water_level = 5;
+while(water_level > 0){
+    console.log(`Taking a sip... water level: ${water_level}`);
+     water_level --;
+}
+
+// break statement
+// Used to exit a loop early, even if the condition is still true.
+// Analogy: You’re reading a book with 10 pages. You reach page 4 and feel tired — so you stop.
+for(let page = 1; page <= 10; page ++){
+    if(page === 5){
+        console.log("I am tired. I am stopping now");
+        break;
+    }
+    console.log(`Reading page: ${page}`);
+}
+
+// continue statement
+// used to skip the current iteration and move to the next
+//  Analogy: You’re checking 10 boxes. You skip box #6 because it’s already empty.
+for(let box = 1; box <= 10; box ++){
+    if(box === 6){
+        console.log("Skipping box number 6");
+        continue;
+    }
+    console.log(`Checking box ${box}`)
+}
