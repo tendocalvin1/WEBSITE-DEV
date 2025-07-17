@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Input</title>
+</head>
+<body>
+    <!--// Keep asking the user for numbers and add them until they enter 0, then print the total sum. -->
+    <script>
+        let sum = 0;
+        let number;
+
+        while(true){
+        number = parseFloat(prompt("Enter a number(0 to stop):"));
+        
+
+        if(number === 0){
+            break; // exits loop when user enter zero
+        }
+
+        sum +=number;
+
+        }
+
+        console.log("The sum of the numbers entered is:",sum);
+    </script>
+</body>
+</html>
