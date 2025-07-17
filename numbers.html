@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While(True) Loop</title>
+</head>
+<body>
+    <script>
+        let sum = 0;
+        let number;
+        while(true){
+        number = parseFloat(prompt("Enter the numbers(At 0 it will stop)"));
+
+
+        if (number === 0){
+            break;
+        }
+        
+        sum += number;
+    }
+
+    console.log("The sum of the entered digits is:",sum);
+    </script>
+</body>
+</html>

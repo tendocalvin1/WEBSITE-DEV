@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <script>
+        // calculator loop
+        while(true){
+        number_one = parseFloat(prompt("Enter the first number:"));
+        number_two = parseFloat(prompt("Enter the second number:"));
+
+        if(isNaN(number_one) || isNaN(number_two)){
+            console.log("Please enter integers please");
+            continue;   // restart the loop
+        }
+
+
+        let operator = prompt("Enter the operator:('+','/','*','-','exit')");
+        
+        // handle exit
+        if (operator === 'exit'){
+            console.log("Calculator exited");
+            break;
+        }
+        
+        
+        function addition(a,b){
+            return a + b;
+        }
+
+        function subtraction(a, b){
+            return a - b;
+        }
+
+        function multiplication(a, b){
+            return a * b;
+        }
+
+        function division(a, b){
+            if(b === 0){
+                console.log("Cannot divide a number by zero");
+            }else{
+                return a / b;
+            }
+
+        }
+
+
+        let result;
+        
+
+        if(operator === '+'){
+            result = addition(number_one, number_two);
+        }else if (operator === '-'){
+            result = subtraction(number_one, number_two);
+        }else if(operator === '*'){
+            result = multiplication(number_one, number_two);
+        }else if(operator === '/'){
+            result = division(number_one, number_two);
+        }else{
+            console.log("Invalid operator, please enter a valid one among the options given to you");
+        }
+
+
+        }
+    </script>
+</body>
+</html>
