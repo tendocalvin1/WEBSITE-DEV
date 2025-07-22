@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Function</title>
+</head>
+<body>
+    <script>
+        function power(){
+            let i = parseFloat(prompt("Enter a digit:"));
+            if(isNaN(i)){
+                console.log("Enter a number please not anything else !");
+                return;
+            }
+        if(i < 1){
+            console.log("Enter a positive integer please !");
+            return;
+        }
+
+        let j = parseFloat(prompt("Enter exponential(n):"));
+        if(isNaN(j)){
+            console.log("Enter a number please not anything else !");
+            return;
+        }
+        if(j < 1){
+            console.log("Enter a positive integer please !");
+            return;
+        }
+            // return i ** j;
+            let result = i ** j;
+            // console.log(`${i} raised to the power of ${j} is:`, result);
+            // return result;
+            console.log(`${i} raised to the power ${j} is`,result);
+        }
+power();
+          
+    </script>
+</body>
+</html>
