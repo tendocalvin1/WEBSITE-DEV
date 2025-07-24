@@ -34,21 +34,83 @@ step1(function(team) {
 //    Write a function retry(callback, attempts) that tries to execute a callback,
 //    but if it fails (throws an error), retries up to attempts times before giving up.
 
-function retry(callback){
+function retry(callback, successCallback, errorCallback, maxAttempts = 3) {
     let college = "Saint Mary's College Kisubi";
     console.log(`My alma mater is called ${college}`);
-    callback(college);
-}
+    let attemptsMade = 0;
 
-// const success = Math.random
-// if (success){
-//     successCallback(college);
-// }else{
-//     errorCallback(college);
-// }
+    function tryCallback() {
+        attemptsMade++;
+        console.log(`Attempt ${attemptsMade} for ${college}`);
+
+        // Simulate success or failure with Math.random()
+        const success = Math.random() > 0.5; // 50% chance of success
+
+        if (success) {
+            callback(college); // Call the main callback
+            successCallback(college); // Call success callback
+        } else if (attemptsMade < maxAttempts) {
+            console.log(`Attempt ${attemptsMade} failed, retrying ...`);
+            setTimeout(tryCallback, 2000); // Retry after 2 seconds
+        } else {
+            errorCallback(college); // Call error callback after max attempts
+        }
+    }
+
+    tryCallback(); // Start the retry process
+}
 
 function attempts(college) {
-console.log(`${college} is the best secondary school in Uganda and that is a well known fact.`);
+    console.log(`${college} is the best secondary school in Uganda and that is a well-known fact.`);
 }
 
-retry(attempts);
+function successCallback(college) {
+    console.log(`Success: ${college} operation completed successfully!`);
+}
+
+function errorCallback(college) {
+    console.log(`Error: Failed to complete operation for ${college} after maximum retries.`);
+}
+
+// Call retry with all required callbacks
+retry(attempts, successCallback, errorCallback);
+
+
+//  Simulate Multiple Async Tasks (setTimeout)
+
+// Write a function that takes multiple callbacks and delays (in ms), 
+// and executes each callback after its corresponding delay.
+
+function dream(callback){
+    setTimeout(() =>{
+        console.log("Today is when am officially starting my journey as a software engineer"); 
+    }, 1000)
+    callback();
+}
+
+function dare(callback){
+        setTimeout(() =>{
+            console.log("I use code to build solutions so that am able to build start-ups.");
+        }, 2000);
+        callback();
+        
+}
+
+function starstruck(){
+    setTimeout(() =>{
+        console.log("I want to build the Africa that all of us have been dreaming about.");
+    }, 3000);
+    
+    
+}
+
+dream(function(callback) {
+    dare(starstruck);
+});
+
+
+
+
+// setTimeout(() =>{
+//     console.log("Today is the final day before React JS")
+// }, 3000);
