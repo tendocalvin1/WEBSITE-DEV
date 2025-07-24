@@ -220,9 +220,9 @@ function hello(successCallback, errorCallback) {
     const success = Math.random() < 0.5;
 
     if (success) {
-        successCallback();
+        successCallback(username);
     } else {
-        errorCallback();
+        errorCallback(username);
     }
 }
 
