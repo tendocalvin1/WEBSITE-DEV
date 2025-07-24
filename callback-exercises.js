@@ -243,18 +243,36 @@ hello(coming, wait);
 
 // Create a repeat function that takes a callback and repeats it a given number of times.
 
-function myname(callback){
-    let initials = 'Arnold Trent';
-    console.log(`My name is ${initials}`);
-    callback(initials);
-}
-
-function iteration(initials){
-    for(let i = initials.length; i >= 0; i++){
-        console.log(initials[i]);
+function repeat(callback, times) {
+    for (let i = 0; i < times; i++) {
+        callback();
     }
 }
 
-myname(iteration);
+// Example usage:
+function greet() {
+    console.log("I'm being repeated!");
+}
+
+repeat(greet, 5); // Repeats greet() 5 times
+
 
 // Write a function that simulates reading a file (using setTimeout) and returns the file content via a callback.
+
+function read(callback){
+    let content = 'The best club in the world is Paris Saint Germain';
+    callback(content);
+}
+function displaycontent(content){
+    setTimeout(() => {
+        console.log("The required content is:", content);
+    }, 3000);
+}
+
+read(displaycontent);
+
+function greet(){
+    console.log('Hello after 3 seconds');
+}
+
+setTimeout(greet, 3000)
