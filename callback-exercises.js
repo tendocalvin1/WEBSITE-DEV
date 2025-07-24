@@ -212,25 +212,49 @@ hello(wait);
 // Create a function that accepts a success callback and an error callback, 
 // and randomly calls one of them.
 
-function hello(callback){
-    let username = 'Darwin Nunez'
+function hello(successCallback, errorCallback) {
+    const username = 'Darwin Nunez';
     console.log(`My name is ${username}`);
-    callback(username);
+
+    // Randomly choose between success or error
+    const success = Math.random() < 0.5;
+
+    if (success) {
+        successCallback();
+    } else {
+        errorCallback();
+    }
 }
 
-function coming(username){
-    console.log("I have successfully conquered that place with my own hands")
+function coming(username) {
+    console.log(`${username} says: I have successfully conquered that place with my own hands.`);
 }
 
-function wait(username){
-    console.log("I didnot get the job offer from that company!");
+function wait(username) {
+    console.log(`${username} says: I did not get the job offer from that company.`);
 }
 
-hello(coming);
-hello(wait);
+
+// Call once and randomly get success or error
+hello(coming, wait);
+
 
 
 
 // Create a repeat function that takes a callback and repeats it a given number of times.
+
+function myname(callback){
+    let initials = 'Arnold Trent';
+    console.log(`My name is ${initials}`);
+    callback(initials);
+}
+
+function iteration(initials){
+    for(let i = initials.length; i >= 0; i++){
+        console.log(initials[i]);
+    }
+}
+
+myname(iteration);
 
 // Write a function that simulates reading a file (using setTimeout) and returns the file content via a callback.
