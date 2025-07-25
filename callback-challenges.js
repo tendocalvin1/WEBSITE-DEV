@@ -114,3 +114,46 @@ dream(function(callback) {
 // setTimeout(() =>{
 //     console.log("Today is the final day before React JS")
 // }, 3000);
+
+function goal(callback){
+    scorer = 'Lionel Messi';
+    console.log(`The scorer of today's match is ${scorer}`);
+    callback(scorer);
+}
+
+function best(){
+    console.log('He has been voted the best player in the world 8 times');
+}
+
+goal(best);
+
+
+// 5. Simulate a Database with Success/Error Callbacks
+
+//     Create a fakeDBQuery(query, successCallback, errorCallback) function
+//     that randomly succeeds or fails depending on the query passed.
+
+function fakeDBQuery(query, successCallback1, errorCallback1){
+    // simulate data processing
+    console.log(`Processing query: ${query}`);
+}
+// simulating either success or failure.(use of math modules)
+const progess = Math.random > 0.5;
+setTimeout(() =>{
+    if(progess){
+        successCallback1(`Query ${query} executed successfully.`);  
+        }else{
+        errorCallback1(`Query ${query} failed.`);
+        }
+}, 2000);
+  
+
+function successCallback1(message){
+    console.log("Success:",message);
+}
+
+function errorCallback1(message){
+    console.log("Error:", message);
+}
+
+fakeDBQuery("INSERT INTO products",successCallback1, errorCallback1);
