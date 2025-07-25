@@ -120,3 +120,12 @@ const result = createFunctions();
 result[0](); // 0
 result[1](); // 1
 result[2](); // 2
+
+
+// 💡 Key Points of Closure Syntax
+
+//     Inner functions "close over" the variables of their outer functions.
+
+//     The returned inner function remembers the scope even after the outer function has finished executing.
+
+//     Closures are used to preserve state, encapsulate data, or create function factories.
